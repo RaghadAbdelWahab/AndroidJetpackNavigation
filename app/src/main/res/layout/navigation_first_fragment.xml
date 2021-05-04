@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_purple"
+    tools:context=".FirstFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/movie_night"
+        android:layout_width="405dp"
+        android:layout_height="510dp"
+        android:layout_marginTop="5dp"
+        android:cropToPadding="true"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/undraw_home_cinema_l7yl"
+        app:layout_constraintBottom_toTopOf="@+id/application_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+    <TextView
+        android:id="@+id/application_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bad_script"
+        android:text="@string/movie_night"
+        android:textColor="@color/white"
+        android:textSize="33sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_night" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/the_best_way_to_pick_a_movie"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/button1_frag1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/application_name" />
+
+    <Button
+        android:id="@+id/button1_frag1"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/crimson"
+        android:text="@string/sign_up"
+        android:textColor="@color/light"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2_frag1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button2_frag1"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/light"
+        android:text="@string/sign_in"
+        android:textColor="@color/black"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1_frag1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

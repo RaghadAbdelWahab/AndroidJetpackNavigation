@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.androidjetpacknavigation.FirstFragment"
+        android:label="navigation_first_fragment"
+        tools:layout="@layout/navigation_first_fragment">
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/explore"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+        <argument
+            android:name="test_string"
+            android:defaultValue="hello world"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment2"
+            app:destination="@id/explore" />
+        <action
+            android:id="@+id/action_home_to_more"
+            app:destination="@id/more" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/explore"
+        android:name="com.example.androidjetpacknavigation.SecondFragment"
+        android:label="navigation_second_fragment"
+        tools:layout="@layout/navigation_second_fragment">
+
+        <action
+            android:id="@+id/action_explore_to_more"
+            app:destination="@id/more" />
+    </fragment>
+    <fragment
+        android:id="@+id/more"
+        android:name="com.example.androidjetpacknavigation.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_more_to_explore"
+            app:destination="@id/explore" />
+    </fragment>
+
+</navigation>
